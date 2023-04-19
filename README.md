@@ -28,4 +28,12 @@ H2<br>
 JPA<br><br>
 Relaciones necesarias
 CRUD de los diferentes modelos.<br>
-Excelente Readme (IMPORTANTE). 
+Excelente Readme (IMPORTANTE)
+
+#
+<h3>Tecnologias Usadas</h3>
+
+ <ul>
+  <li>Java 17</li>
+  <li>Spring Boot</li>
+</ul> 
