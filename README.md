@@ -38,6 +38,9 @@ Excelente Readme (IMPORTANTE)
   <li>Spring Boot</li>
 </ul> 
 
+<h3>Postman</h3>
+
+
 # 📁 Collection: Juego 
 
 
@@ -882,6 +885,79 @@ Without body
 
 
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
+
+## End-point: DELETE_Mensaje_Usuario
+### Method: DELETE
+>```
+>localhost:8181/api/mensaje?idMsg=2&idUser=2
+>```
+### Query Params
+
+|Param|value|
+|---|---|
+|idMsg|2|
+|idUser|2|
+
+
+### Response: 200
+```json
+Without body
+```
+
+
+⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
+
+## End-point: UPDATE_Mensaje_Usuario
+### Method: PUT
+>```
+>localhost:8181/api/mensaje?idUser=3
+>```
+### Body (**raw**)
+
+```json
+ {
+        "id": 3,
+        "contenido": "¡Estoy buscando equipo para una partida, editado",
+        "fecha_hora": "2023-04-19 12:35:00",
+        "usuario": {
+            "id": 3,
+            "nombre": "usuario3",
+            "contrasena": "contrasena3",
+            "mail": "usuario3@example.com"
+        },
+        "grupo": {
+            "id": 2,
+            "nombre": "Grupo 2 - Fortnite",
+            "descripcion": "Unete a nuestra partida de Fortnite",
+            "juego": {
+                "id": 2,
+                "nombre": "Fortnite",
+                "plataforma": "PC"
+            },
+            "creador": {
+                "id": 1,
+                "nombre": "usuario1",
+                "contrasena": "contrasena1",
+                "mail": "usuario1@example.com"
+            }
+        }
+    }
+```
+
+### Query Params
+
+|Param|value|
+|---|---|
+|idUser|3|
+
+
+### Response: 200
+```json
+Without body
+```
+
+
+⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
 # 📁 Collection: Participa 
 
 
@@ -1231,5 +1307,4 @@ Without body
 
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
 _________________________________________________
-
 
