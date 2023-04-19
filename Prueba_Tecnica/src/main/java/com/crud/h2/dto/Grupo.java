@@ -35,7 +35,7 @@ public class Grupo {
 	private Juego juego;
 	
 	@ManyToOne
-	@JoinColumn(name = "usuario_id")
+	@JoinColumn(name = "creador_id")
 	private Usuario creador;
 	
 	@OneToMany(fetch = FetchType.LAZY)
