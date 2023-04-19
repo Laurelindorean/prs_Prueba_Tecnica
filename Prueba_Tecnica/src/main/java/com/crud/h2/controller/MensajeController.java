@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import com.crud.h2.dto.Mensaje;
 import com.crud.h2.service.MensajeServiceImp;
@@ -61,5 +62,13 @@ public class MensajeController {
 		mensajeServiceImp.eliminarMensaje(id);
 	}
 	
-
+	@DeleteMapping("/mensaje")
+	public void eliminarMensaje(@RequestParam int idMsg, @RequestParam int idUser) {
+		mensajeServiceImp.eliminarMensajeUsuario(idMsg, idUser);
+	}
+	
+	@PutMapping("/mensaje")
+	public void editarMensajeUsuario(@RequestBody Mensaje mensaje, @RequestParam int idUser) {
+		mensajeServiceImp.editarMensajeUsuario(mensaje, idUser);
+	}
 }

@@ -23,4 +23,8 @@ public interface IMensajeService {
 	public Mensaje actualizarMensaje(Mensaje mensaje);
 
 	public void eliminarMensaje(int id);
+	
+	public void eliminarMensajeUsuario(int idMsg, int idUser);
+	
+	public Mensaje editarMensajeUsuario(Mensaje mensaje, int idUser);
 }

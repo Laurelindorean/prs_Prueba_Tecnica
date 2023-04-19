@@ -5,6 +5,8 @@ package com.crud.h2.service;
 
 import java.util.List;
 
+import javax.management.RuntimeErrorException;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -45,5 +47,25 @@ public class MensajeServiceImp implements IMensajeService {
 	public void eliminarMensaje(int id) {
 		iMensajeDAO.deleteById(id);
 	}
+	
+	public void eliminarMensajeUsuario(int idMsg, int idUser) {
+		Mensaje msg = this.mensajeXID(idMsg);
+		
+		if(msg.getUsuario().getId() != idUser) {
+			throw new RuntimeException("idMsg no corresponde con el idUser indicado");
+		}
+		
+		this.eliminarMensaje(msg.getId());
+	}
 
+	@Override
+	public Mensaje editarMensajeUsuario(Mensaje mensaje, int idUser) {
+		Mensaje msgGuardado = this.mensajeXID(mensaje.getId());
+		
+		if(msgGuardado.getUsuario().getId() != idUser) {
+			throw new RuntimeException("Mensaje no corresponde con el idUser indicado");
+		}
+	
+		return this.actualizarMensaje(mensaje);
+	}
 }
