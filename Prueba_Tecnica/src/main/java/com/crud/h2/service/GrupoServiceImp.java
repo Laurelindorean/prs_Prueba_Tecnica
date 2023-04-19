@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import com.crud.h2.dao.IGrupoDAO;
 import com.crud.h2.dto.Grupo;
+import com.crud.h2.dto.Juego;
 
 /**
  * @author Palmira
@@ -45,6 +46,16 @@ public class GrupoServiceImp implements IGrupoService{
 	public void eliminarGrupo(int id) {
 		iGrupoDAO.deleteById(id);
 		
+	}
+
+	@Override
+	public List<Grupo> buscarXJuego(int id) {
+		return iGrupoDAO.findByJuegoId(id);
+	}
+
+	@Override
+	public List<Grupo> buscarXNombre(String nombre) {
+		return iGrupoDAO.findByJuegoName(nombre);
 	}
 
 }

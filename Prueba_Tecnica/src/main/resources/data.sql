@@ -58,7 +58,8 @@ INSERT INTO juego (nombre, plataforma) VALUES
 ('Minecraft', 'PC'),
 ('Fortnite', 'PC'),
 ('League of Legends', 'PC'),
-('Super Mario', 'Nintendo Switch');
+('Super Mario', 'Nintendo Switch'),
+('World of Warcraft', 'PC');
 
 INSERT INTO usuario (nombre, contrasena, mail) VALUES
 ('usuario1', 'contrasena1', 'usuario1@example.com'),
@@ -68,7 +69,10 @@ INSERT INTO usuario (nombre, contrasena, mail) VALUES
 INSERT INTO grupo (nombre, descripcion, juego_id, creador_id) VALUES
 ('Grupo 1 - Minecraft', 'Unete a nuestra partida de Minecraft', 1, 1),
 ('Grupo 2 - Fortnite', 'Unete a nuestra partida de Fortnite', 2, 1),
-('Grupo 3 - League of Legends','Unete a nuestra partida de LOL', 3, 2);
+('Grupo 3 - League of Legends','Unete a nuestra partida de LOL', 3, 2),
+('Grupo 4 - Fortnie-Lovers', 'Ven a disfrutar', 2, 2),
+('Grupo 5 - Forniters', 'Niños rata', 2, 1),
+('Grupo 6 - WOW', 'Gente sin vida', 5, 3);
 
 INSERT INTO participa (usuario_id, grupo_id) VALUES
 (1, 1),

@@ -21,6 +21,10 @@ public interface IGrupoService {
 	public Grupo grupoXID(int id);
 
 	public Grupo actualizarGrupo(Grupo grupo);
+	//para buscar grupos seleccionando un juego
+	public List<Grupo> buscarXJuego(int id);
 
 	public void eliminarGrupo(int id);
+	
+	public List<Grupo> buscarXNombre(String nombre);
 }
